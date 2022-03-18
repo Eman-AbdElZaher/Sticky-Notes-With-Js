@@ -1,0 +1,234 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body {
+    font-family:"Muli", sans-serif;
+}
+input[type=button] {
+    border: none;
+    padding:10px 15px;
+    width:80px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right:10px;
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 500;
+    font-size: 17px;
+    text-align: center;
+    box-shadow:0 0 7px rgb(0,0,0,0);
+}
+#create {
+    background-color: #552cf6;
+    color:#fff
+}
+#clear {
+    background-color: #fff;
+    border:1px solid #552cf6;
+}
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+header{
+  position: relative;
+    width:60%;
+    margin:30px auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 10px;
+    height: 340px;
+    background-color: #fcfcfc;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+header h1 {
+    font-family:"Muli", sans-serif;
+    font-size:29px;
+    padding:10px;
+    font-weight: 700;
+}
+header .panel-body {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:10px;
+}
+header .panel-body textarea {
+    width:100%;
+    display: block;
+    height:139px;
+    padding:10px;
+    border:none;
+    font: 20px "Short Stack", "Gloria Hallelujah", cursive;
+    overflow: hidden;}
+.stickcolor {
+  cursor:pointer;
+}
+#col1 {background-color:#cdeaf8;}
+#col2{background-color: #bef1ba;}
+#col3{background-color: #eeb8ee;}
+#col4{background-color: #cdc2fe;}
+#col5{background-color:#FCF9A9;}
+.container {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    margin:20px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default radio button */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ #col1,
+  .container input:checked ~ #col1 {
+    background-color: #79c6ec;
+  }
+  .container:hover input ~ #col2,
+  .container input:checked ~ #col2 {
+    background-color: #5fdc56;
+  }
+  .container:hover input ~ #col3,
+  .container input:checked ~ #col3 {
+    background-color: #dc6fdc;
+  }
+  .container:hover input ~ #col4,
+  .container input:checked ~ #col4 {
+    background-color: #9881fd;
+  }
+  .container:hover input ~ #col5,
+  .container input:checked ~ #col5 {
+    background-color: #faf66b;
+  }
+header #col {
+    color:#777;
+    font-size:19px;
+    font-weight: 400;
+    display: inline-block;
+    margin-top:-20px;
+}
+.action{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.cont {
+    width:90%;
+    margin:0 auto;
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.sticky-notes {
+ width:100%;
+ display:flex;
+ flex-wrap: wrap;
+ padding:20px;
+}
+.sticky {
+  font: 20px "Short Stack", "Gloria Hallelujah", cursive;
+  line-height: 1.5;
+  border-radius: 3px;
+  background-color:  rgb(247, 233, 141);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 270px;
+  min-height: 250px;
+  margin: 30px;
+  transition: 0.3s;
+  display: block;
+  padding: 10px 10px 0 10px;
+  padding-top: 30px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  word-wrap:break-word;
+}
+.sticky:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+  }
+  .sticky:nth-child(even) {
+    transform: rotate(2deg);
+  }
+  .sticky:nth-child(odd) {
+    transform: rotate(-1.5deg);
+  }
+
+  .remove{
+    font-size:20px;
+    font-weight: 900;
+    position: absolute;
+    height:20px;
+    top:-25px;
+    right:20px;
+    color:#f00;
+    cursor: pointer;
+  }
+  .sticky:hover .remove {
+    top:10px;
+  }
+  #add,#deleteAll {
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    background-color: #f00;
+    right: 50px;
+    bottom:50px;
+    border-radius: 50%;
+    line-height: 60px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+   font-size: 30px;
+   -webkit-transition: transform .3s;
+   -moz-transition: transform .3s;
+   transition: transform .3s;
+}
+#deleteAll {
+  background-color: #000;
+  color:#fff;
+  left:30px;
+ }
+#add:hover{
+  transform: rotate(90deg);
+  box-shadow: 0 11px 13px rgba(0, 0, 0, 0.1);
+}

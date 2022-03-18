@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule-Time</title>
+    <link rel="Stylesheet" href="css/schedule.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="Stylesheet" href="css/all.css" />
+  </head>
+  <body>
+    <div id="myModal" class="modal">
+      <header class="create-Task">
+        <div class="panel-header">
+          <h1>Create a Task</h1>
+        </div>
+        <div class="panel-body">
+          <textarea id="input" placeholder="Title" maxlength="100"></textarea>
+        </div>
+        <div class="panel-footer">
+          <div class="color">
+            <span id="col">Color</span>
+            <label class="container">
+              <input type="radio" name="radio" value="#cdeaf8" id="color1" />
+              <span class="checkmark" id="col1"></span>
+            </label>
+            <label class="container">
+              <input type="radio" name="radio" value=" #bef1ba" id="color2" />
+              <span class="checkmark" id="col2"></span>
+            </label>
+            <label class="container">
+              <input type="radio" name="radio" value="#eeb8ee" id="color3" />
+              <span class="checkmark" id="col3"></span>
+            </label>
+            <label class="container">
+              <input type="radio" name="radio" value="#cdc2fe" id="color4" />
+              <span class="checkmark" id="col4"></span>
+            </label>
+            <label class="container">
+              <input type="radio" name="radio" value="#FCF9A9" id="color5" />
+              <span class="checkmark" id="col5"></span>
+            </label>
+          </div>
+          <div class="action">
+            <input type="button" id="create" value="Create" />
+            <input type="button" id="clear" value="Clear" />
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <div class="cont">
+      <div class="sticky-notes" id="stickyNotes"></div>
+    </div>
+    <span id="add"><i class="fas fa-plus"></i></span>
+    <span id="deleteAll"><i class="fas fa-trash-alt"></i></span>
+    <script src="JS/Schedule.js"></script>
+  </body>
+</html>
